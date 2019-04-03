@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BMB Pumps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #006400;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #010000;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #010000;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #010000;
+    color: #fff;
+    padding: 200px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #006400;
+    font-size: 50px;
+  }
+  .logo {
+    color: #006400;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #006400;
+  }
+  .carousel-indicators li {
+    border-color: #006400;
+  }
+  .carousel-indicators li.active {
+    background-color: #006400;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #006400; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #006400;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #006400 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #006400;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #006400;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #006400;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+  <img src="logo2.png" alt="Cinque Terre" width="250" height="62" style="margin:5px 1px"> 
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">ACHIEVEMENTS</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#pricing">PRODUCTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>BMB pumps</h1>
+  <p style="margin: 35px 100px 50px"> We specialize in the manufacturing of electric water pumps and electric motors
+  with a diverse range of specifications, to address needs and demands in the
+  industrial, commercial, agricultural and residential domains.</p> 
+</div>
+<br>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+      <h1>About US</h2><br>
+	<h4 style="margin: 10px 1px">
+          BMB Pumps is a leading electric water pumps manufacturer, established by the Late Haji Muhammad Anwar in 1988 in Gujranwala district of Pakistan. The current management team comprises of:</h4>
+	<h4 style="margin: 1px 1px"> Haji Muhammad Shahid Anwar (Chief Executive and Head Research and Development)</h4>
+	 <h4 style="margin: 1px 1px"> Mr. Zubair Shahid (Technical lead and Head Marketing dept.)</h4>
+	<h4 style="margin: 1px 1px">Mr. Umair Shahid (Manager Production and Operation)</h4>
+	<h4 style="margin: 1px 1px"> Mr. Uzair Shahid (Manager Finance)</h4>
+         <h4 style="margin: 10px 1px"> We specialize in the manufacturing of electric water pumps and electric motors with a diverse range of specifications, to address needs and demands in the industrial, commercial, agricultural and residential domains. Our manufacturing site is very ideally situated in the heartland of Pakistan, in the popular industrial district of Gujranwala. We proudly possess, the capacity and training to cater to the needs of our clients all over Pakistan, and deliver quality products on demand.</h4>
+ 	<h4 style="margin: 10px 1px">BMB Pumps has more than 31 years of experience in the Pakistani Pumping Industry, and has also established an equally long commitment with its clients. Our products are best recognized as reliable, technically advanced, innovative, modernistic, highly power efficient and incredibly easy to install. Our customers enjoy the fruits of our extensive and in-depth technical expertise that distinguish us from our counterparts in the industry. When you choose BMB, you ensure environmental friendly and optimal management of your most precious resource, water.</h4>
+	<h4 style="margin: 10px 1px"> Our equipment is widely used, some applications being those in Water Supply Systems, Cooling Systems, Water Circulation Systems, Fire-hazard solutions such as sprinklers, showering and pressurized water supply for high-rise buildings and fire fighting systems, Water Transportation, Farmland Irrigation and Drainage, and other related applications in the Agricultural and Industrial spheres.</h4>
+          <h4 style="margin: 10px 1px">Our team comprises of some of the best professional and technical resources in Pakistan. Technical proficiency, unparalleled efficiency, polished quality products, a secure and reliable quality control, strong and highly satisfactory after-sales services help us meet all of our clients' requests. Our actions and strategies revolve around people who have associated with us, and they remain our main focus.</h4>
+	<h4 style="margin: 10px 1px"> We strive to deliver the best products and services to our clients. BMB Pumps has become a widely used and trusted brand all over Pakistan, and we plan to extend our reach soon. We warmly welcome all sorts of inquiries regarding our products, services and business partnerships.</h4>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+	<img src="values.jpg" style="margin-top: 60px" alt="Cinque Terre" width="400" height="265">
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>OUR PHILOSPHY:</strong> Our foremost center of attention is our beloved customers and our unbeatable and superlative products. We are struggling diligently to attain premier quality and innovative products for our valued customers, which are company's veracious strength and has no substitute. We strongly believe in serving our customers by exchanging best values with them and our reluctance to compromise on quality and customer's satisfaction at any cost.</h4>
+      <h4><strong>OUR MISSION:</strong> To provide superior quality, innovative, environment friendly and state-of-the-art products that is best return of our customer values</h4>
+      <h4><strong>OUR VISION:</strong>To become a company that is known for its quality products</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Container (ACHIEVEMENTS Section) -->
+<div id="services" class="container-fluid text-center">
+  <h1>ACHIEVEMENTS</h1>
+  <h4>What we achieved</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>LOVE FROM CUSTOMERS</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>CERTIFIED</h4>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4>HARD WORK</h4>
+    </div>
+</div><br><br>
+
+  <h2>What our customers say</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<div id="services" class="container-fluid text-center">
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h1>Portfolio</h1><br>
+  <h4>BMB pumps provides variety of pumping products that find their applications in Industrial,<br>
+	Commercial, Domestic and Agricultural spheres
+</h4>
+<div class="row">
+  <div class="col-md-3">
+        <img src="industry.jpg" alt="Cinque Terre" width="100%">
+        <div class="caption">
+          <h2>INDUSTRIAL</h2>
+        </div>
+  </div>
+  <div class="col-md-3">
+        <img src="commercial.jpg" alt="Lights" width="100%">
+        <div class="caption">
+          <h2>COMMERCIAL</h2>
+        </div>
+  </div>
+  <div class="col-md-3">
+        <img src="domestic.jpg" alt="Lights" width="100%">
+        <div class="caption">
+          <h2>DOMESTIC</h2>
+        </div>
+  </div>
+  <div class="col-md-3">
+        <img src="agricultural.jpg" alt="Cinque Terre" width="100%">
+        <div class="caption">
+          <h2>AGRICULTURE</h2>
+        </div>
+  </div>
+
+</div>   </div><br>
+  
+
+<!-- Container (Products Section) -->
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
